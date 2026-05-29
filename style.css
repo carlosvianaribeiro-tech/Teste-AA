@@ -1,0 +1,119 @@
+/* Define a paleta de Cores reutilizáveis (Variáveis) */
+
+:root { 
+    --marrom-escuro: #ff9a3c;  /* laranja base para texto e rodapé */
+    --marrom-claro: #46382b;  /* marrom claro para detalhes */
+    --bege: #F5F5DC;          /* Fundo da página */
+    --verde-claro: #bacf40;  /* verde claro para o cabeçalho e destaques */
+}
+
+/* Reset básico e Configuração de Rolagem Suave */
+
+* {
+    margin: 0;  /*Espaço externo do conteúdo*/
+    padding: 0;  /*Espaço interno do conteúdo*/
+    box-sizing: border-box;  /*Cálculo de tamanho para o navegador*/
+}
+
+html {
+    /* Esta linha faz com que o clique no menu desça a tela suavemente */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bege);  /*Variável que define a cor de fundo (repetido 4x com cores diferentes nos Blocos de Cabeçalho e Rodapé)*/
+    color: var(--marrom-claro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Estilo de texto*/
+    line-height: 1.6; /*Altura de linha*/
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: var(--marrom-claro);
+    color: var(--bege);
+    padding: 20px 0; /*Espaço interno do conteúdo*/
+    position: sticky; /*Mantenha o elemento visível sem ocupar espaço fixo o tempo todo*/
+    top: 0; /*Distância entre o elemento e o topo da área de rolagem ou da janela*/
+    z-index: 1000; /*Controla a ordem de empilhamento na página*/
+    box-shadow: 0 4px 6px var(--verde-claro); /*Sombra aos redores*/
+}
+
+header h1 { /*Cabeçalho de título*/
+    text-align: center; /*Alinhamento do título*/
+    margin-bottom: 15px; /*Espaço externo do conteúdo à baixo (por 15 pixels)*/
+    font-size: 2rem; /*Tmanho da fonte do título em relação ao tamanho base da página de 32 pixels*/
+    text-transform: uppercase; /*Conmversão para letras maiúsculas*/
+    letter-spacing: 2px; /*Espaçamento entre as letras*/
+}
+
+nav ul {  /*Lista de navegação*/
+    list-style-type: none; /*Nenhum tipo de marcador*/
+    display: flex; /*Flexbox*/
+    justify-content: center; /*Alinhamento no principal eixo*/
+    gap: 30px;
+}
+
+nav ul li a {  /*Links estilizados*/
+    color: var(--bege);
+    text-decoration: none; /*Nenhuma decoração*/
+    font-weight: bold; /*Espessura em negrito da fonte*/
+    font-size: 1.1rem; /*Tamanho equivalente de 17.6 pixels*/
+    transition: color 0.3s ease; /*Transição suave e lento*/
+}
+
+nav ul li a:hover { /*Seletor utilizado para dar efeito de feedback visual*/
+    color: var(--marrom-claro);
+}
+
+/* Estilos do Corpo / Tópicos */
+main {
+    max-width: 900px; /*Largura máxima do tópico*/
+    margin: 0 auto; /*Espaço externo do conteúdo centralizado*/
+    padding: 40px 20px; /*Espaço interno do conteúdo*/
+}
+
+.conteudo-topico {  /*Seção de conteúdo*/
+    background-color: #ffffff;
+    padding: 30px; /*Espaço interno do conteúdo*/
+    margin-bottom: 50px; /*Espaço externo a baixo do conteúdo*/
+    border-radius: 8px; /*Arredondamento das bordas*/
+    box-shadow: 0 4px 8px rgba(74, 48, 24, 0.1);
+    /* Ajuste para o scroll suave não ficar escondido pelo cabeçalho fixo */
+    scroll-margin-top: 120px;
+}
+
+.conteudo-topico h2 {
+    color: var(--verde-claro);
+    margin-bottom: 20px; /*Espaço externo do conteúdo*/
+    font-size: 1.8rem; /*Tamanho da fonte em 28.8 pixels*/
+    border-bottom: 2px solid var(--marrom-claro); /*Borda para destaque*/
+    padding-bottom: 10px; /*Espaço interno a baixo do conteúdo*/
+}
+
+.conteudo-topico img { /*Imagens*/
+    width: 100%; /*Largura*/
+    height: 350px; /*Altura*/
+    object-fit: cover; /*Redimensionamento da imagem*/
+    border-radius: 6px; /*Arredondamento das bordas*/
+    margin-bottom: 20px; /*Espaço externo a baixo do conteúdo*/
+    border: 3px solid var(--bege); /*Borda*/
+}
+
+.conteudo-topico p {
+    text-align: justify; /*Alinhamento do texto em toda a margem*/
+    font-size: 1.1rem; /*Tamanho da fonte de 17.6 pixels*/
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: var(--laranja);
+    color: var(--bege);
+    text-align: center;  /*Alinhamento de texto*/
+    padding: 30px 20px;  /*Espaço interno do conteúdo*/
+    margin-top: 40px;  /*Espaço externo acima do conteúdo*/
+}
+
+footer p { 
+    margin-bottom: 5px;  /*Espaço externo a baixo do conteúdo*/
+    font-size: 0.9rem;  /*Tamanho da fonte de 14.4 pixels*/
+}
